@@ -30,32 +30,30 @@ class SwiftTextViewController: UIViewController, SFSpeechRecognizerDelegate {
         masterTextList = masterTextList.map { $0.trimmingCharacters(in: .whitespaces) }
         masterTextList = masterTextList.map { $0.lowercased()}
         showPossibleDrinks();
+        
+        
     }
-    
     
     func showPossibleDrinks(){
         textHolder.text = ""
-        print("SHOW possible drinks: ", masterTextList)
         if(masterTextList.contains("vodka") && masterTextList.contains("lime")) {
-            textHolder.text = textHolder.text! + "VODKA + LIME "
+            textHolder.text = textHolder.text! + "Vodka Lime "
         }
         if(masterTextList.contains("tequila") && masterTextList.contains("lime")) {
-            textHolder.text = textHolder.text! + "Tequila + LIME "
+            textHolder.text = textHolder.text! + "Tequila and Lime "
         }
         if(masterTextList.contains("rum") && masterTextList.contains("coke")) {
-            textHolder.text = textHolder.text! + "rum + coke "
+            textHolder.text = textHolder.text! + "Rum and Coke "
         }
         if(masterTextList.contains("tequila") && masterTextList.contains("sprite")) {
-            textHolder.text = textHolder.text! + "tequila + Sprite "
+            textHolder.text = textHolder.text! + "Tequila and Sprite "
         }
         if(masterTextList.contains("red bull") && masterTextList.contains("vodka")) {
-            textHolder.text = textHolder.text! + "VODKA + redbull "
+            textHolder.text = textHolder.text! + "Vodka Redbull "
         }
-        if(masterTextList.contains("peppermint") && masterTextList.contains("lime")) {
-            textHolder.text = textHolder.text! + "peppermint + LIME "
+        if(masterTextList.contains("peppermint") && masterTextList.contains("vodka")) {
+            textHolder.text = textHolder.text! + "Peppermint vodka "
         }
-        
-        
     }
     
    
